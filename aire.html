@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIRESPACE EXPRESS CONTAINER  - Professional, Secure, and Punctual Integrated Logistics Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ====== Global Styles ====== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: linear-gradient(to right, #1a6bc4, #2a83e8);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: linear-gradient(to right, #155aa8, #1a6bc4);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(42, 131, 232, 0.3);
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #1a365d;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background: #2a83e8;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* ====== Header ====== */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            color: #1a365d;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: #2a83e8;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-menu li a {
+            font-weight: 600;
+            color: #444;
+            font-size: 1.05rem;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-menu li a:hover,
+        .nav-menu li a.active {
+            color: #2a83e8;
+        }
+
+        .nav-menu li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #2a83e8;
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu li a:hover::after,
+        .nav-menu li a.active::after {
+            width: 100%;
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #1a365d;
+        }
+
+        /* ====== Hero Section ====== */
+        .hero {
+            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.9)), url('https://images.unsplash.com/photo-1601925260368-ae2f83d5e2f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 140px 0;
+        }
+
+        .hero h2 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 35px;
+            opacity: 0.9;
+        }
+
+        /* ====== Features ====== */
+        .features {
+            background-color: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px 25px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #2a83e8;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card i {
+            font-size: 2.8rem;
+            color: #2a83e8;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #1a365d;
+        }
+
+        /* ====== Services ====== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover .service-img img {
+            transform: scale(1.05);
+        }
+
+        .service-content {
+            padding: 25px;
+        }
+
+        .service-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: #1a365d;
+        }
+
+        /* ====== About Us ====== */
+        .about {
+            background-color: #f0f7ff;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            color: #1a365d;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .about-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .stat-item h4 {
+            font-size: 2.5rem;
+            color: #2a83e8;
+            margin-bottom: 5px;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ====== Tracking ====== */
+        .tracking {
+            background-color: white;
+            text-align: center;
+        }
+
+        .tracking-box {
+            background: linear-gradient(135deg, #f0f7ff 0%, #e3eeff 100%);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(42, 131, 232, 0.1);
+        }
+
+        .tracking-form {
+            display: flex;
+            max-width: 600px;
+            margin: 30px auto 0;
+        }
+
+        .tracking-form input {
+            flex: 1;
+            padding: 16px 20px;
+            border: 1px solid #ccc;
+            border-right: none;
+            border-radius: 4px 0 0 4px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .tracking-form input:focus {
+            border-color: #2a83e8;
+        }
+
+        .tracking-form .btn {
+            border-radius: 0 4px 4px 0;
+            padding: 16px 30px;
+        }
+
+        /* ====== News ====== */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-date {
+            background: #2a83e8;
+            color: white;
+            padding: 12px 20px;
+            display: inline-block;
+            border-radius: 0 0 4px 0;
+            font-weight: 600;
+        }
+
+        .news-content {
+            padding: 25px;
+        }
+
+        .news-content h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #1a365d;
+        }
+
+        /* ====== Footer ====== */
+        footer {
+            background-color: #1a365d;
+            color: #ccc;
+            padding: 70px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-column h3 {
+            color: white;
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: #2a83e8;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a:hover {
+            color: #2a83e8;
+            padding-left: 5px;
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 18px;
+        }
+
+        .contact-info i {
+            color: #2a83e8;
+            margin-right: 12px;
+            margin-top: 5px;
+            font-size: 1.1rem;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.95rem;
+            color: #aaa;
+        }
+
+        /* ====== Responsive Design ====== */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+
+            .hero h2 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                flex-direction: column;
+                background: white;
+                width: 100%;
+                text-align: center;
+                padding: 20px 0;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+                transition: 0.3s;
+                gap: 0;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-menu li {
+                margin: 15px 0;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .hero h2 {
+                font-size: 2.3rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .tracking-form {
+                flex-direction: column;
+            }
+
+            .tracking-form input {
+                border-right: 1px solid #ccc;
+                border-radius: 4px;
+                margin-bottom: 15px;
+            }
+
+            .tracking-form .btn {
+                border-radius: 4px;
+                width: 100%;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>AIRESPACE<span> EXPRESS CONTAINER</span></h1>
+            </div>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#tracking">Track Shipment</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Professional, Secure, and Punctual Integrated Logistics Solutions</h2>
+            <p>We are committed to providing global land, air, sea, and warehousing distribution services. With our intelligent supply chain management system and nationwide network, we ensure your cargo arrives safely and efficiently.</p>
+            <a href="#contact" class="btn">Get a Quote</a>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure & Reliable</h3>
+                    <p>Full insurance coverage, GPS real-time tracking, professional team operations to ensure cargo safety.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>On-Time Delivery</h3>
+                    <p>Intelligent route planning, efficient transport network, committed schedules with 99.8% on-time rate.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock customer service and technical support, quick response to your inquiries and needs.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-globe-asia"></i>
+                    <h3>Global Network</h3>
+                    <p>Covering over 200 countries and regions worldwide, providing door-to-door international logistics and customs clearance services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Core Services</h2>
+                <p>We provide comprehensive logistics services to meet the needs of different industries and scale of clients</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Road Freight">
+                    </div>
+                    <div class="service-content">
+                        <h3>Road Freight</h3>
+                        <p>Provincial, inter-provincial, and cross-border road transport services with a large fleet of various vehicle types for general and special cargo.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Air Freight">
+                    </div>
+                    <div class="service-content">
+                        <h3>Air Freight</h3>
+                        <p>Close cooperation with major airlines to provide fast international and domestic air freight services for high-value or urgent cargo.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1562887189-e5d078343de4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ocean Freight">
+                    </div>
+                    <div class="service-content">
+                        <h3>Ocean Freight</h3>
+                        <p>FCL and LCL services to major ports worldwide, providing one-stop services including booking, customs clearance, and warehousing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Us</h2>
+                <p>With over a decade of experience in the logistics industry, we have become a trusted partner</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Committed to Creating More Efficient and Intelligent Connections</h3>
+                    <p>Established in 2012, AIRESPACE EXPRESS CONTAINER has evolved from a regional transportation company to an integrated logistics service provider with a national network and cross-border capabilities. We always prioritize customer needs.</p>
+                    <p>The company owns over 500 self-operated vehicles, collaborates with more than 2,000 additional vehicles, and manages warehouse space exceeding 300,000 square meters. We continuously invest in technology, with our self-developed "Changfeng" logistics management system enabling end-to-end visibility and intelligent management from order placement to delivery.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h4>500+</h4>
+                            <p>Corporate Clients</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>12+ Years</h4>
+                            <p>Industry Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>99.8%</h4>
+                            <p>On-Time Rate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="AIRESPACE EXPRESS CONTAINER Warehouse">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tracking -->
+    <section class="tracking" id="tracking">
+        <div class="container">
+            <div class="section-title">
+                <h2>Track Your Shipment</h2>
+                <p>Real-time tracking of your cargo location and latest transport status</p>
+            </div>
+            <div class="tracking-box">
+                <p>Please enter your tracking number (B/L number) to check the latest cargo transport status and estimated arrival time.</p>
+                <form class="tracking-form">
+                    <input type="text" placeholder="Example: CS20230528001" required>
+                    <button type="submit" class="btn">Track Now</button>
+                </form>
+                <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">Supports batch tracking. For assistance, please call customer service: +86-400-800-XXXX</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- News -->
+    <section class="news" id="news">
+        <div class="container">
+            <div class="section-title">
+                <h2>News & Updates</h2>
+                <p>Latest industry insights and company announcements</p>
+            </div>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-date">Nov 15, 2023</div>
+                    <div class="news-content">
+                        <h4>AIRESPACE EXPRESS CONTAINER  Launches New Southeast Asia Route</h4>
+                        <p>To meet market demand, we have officially launched cross-border land transport routes from China to Vietnam and Thailand, improving delivery time by 30%.</p>
+                        <a href="#" style="color: #2a83e8; font-weight: 600; display: inline-block; margin-top: 10px;">Read More →</a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-date">Oct 08, 2023</div>
+                    <div class="news-content">
+                        <h4>Awarded "National Logistics Integrity Enterprise" Title</h4>
+                        <p>In the 2023 National Logistics Enterprise Selection, our company was once again honored with this award for quality service and excellent reputation.</p>
+                        <a href="#" style="color: #2a83e8; font-weight: 600; display: inline-block; margin-top: 10px;">Read More →</a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-date">Sep 20, 2023</div>
+                    <div class="news-content">
+                        <h4>Smart Warehouse System Upgrade Announcement</h4>
+                        <p>Three major warehouse centers in East and South China have completed intelligent system upgrades, significantly improving inbound and outbound efficiency.</p>
+                        <a href="#" style="color: #2a83e8; font-weight: 600; display: inline-block; margin-top: 10px;">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>AIRESPACE EXPRESS CONTAINER</h3>
+                    <p>Committed to becoming the most trusted intelligent logistics partner, providing efficient, secure, and environmentally friendly supply chain solutions.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#tracking">Track Shipment</a></li>
+                        <li><a href="#news">News</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Headquarters: Building B, Innovation Park, 168 Logistics Avenue, Pudong District, Shanghai, China</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>Customer Service: +86-400-800-XXXX<br>Business Line: +86-21-6888XXXX</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>Business Email: business@cslllogistics.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023  AIRESPACE EXPRESS CONTAINER Co., Ltd. All Rights Reserved | ICP License: Shanghai ICP No. 12345678</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileToggle = document.getElementById('mobileToggle');
+            const navMenu = document.getElementById('navMenu');
+
+            mobileToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                // Toggle icon
+                const icon = mobileToggle.querySelector('i');
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.replace('fa-bars', 'fa-times');
+                } else {
+                    icon.classList.replace('fa-times', 'fa-bars');
+                }
+            });
+
+            // Close mobile menu when clicking a link
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navMenu.classList.remove('active');
+                    mobileToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
